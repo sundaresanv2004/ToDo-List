@@ -10,7 +10,7 @@ This ToDo List repository employs a dual approach for efficient task management,
 # Getting Started:
 Clone the Repository:
 ```
-git clone https://github.com/your-username/todo-list-repo.git
+git clone https://github.com/sundaresanv2004/Todo-List.git
 ```
 
 # Usage:
