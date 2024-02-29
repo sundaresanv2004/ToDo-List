@@ -10,19 +10,36 @@
 }
 
 :root {
-    --text: #fff;
-    --Primary100: #382bf0;
-    --Primary200: #5e43f3;
-    --Primary300: #7a5af5;
-    --theme-primary-base: #d1c4ff;
-    --background: #1e1e1e;
-    --theme-surface-base: #121212;
-    --theme-surface-a20: color-mix(in srgb, var(--theme-primary-base), var(--theme-surface-base) 90%);
+
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-primary-100:  #3f51b5;
+    --color-primary-200:  #5962be;
+    --color-primary-300:  #7074c6;
+    --color-primary-400:  #8587ce;
+    --color-primary-500:  #9a9ad7;
+    --color-primary-600:  #aeaddf;
+
+    /** CSS DARK THEME SURFACE COLORS */
+    --color-surface-100:  #121212;
+    --color-surface-200:  #282828;
+    --color-surface-300:  #3f3f3f;
+    --color-surface-400:  #575757;
+    --color-surface-500:  #717171;
+    --color-surface-600:  #8b8b8b;
+
+    /** CSS DARK THEME MIXED SURFACE COLORS */
+    --color-surface-mixed-100:  #181820;
+    --color-surface-mixed-200:  #2d2d35;
+    --color-surface-mixed-300:  #44444b;
+    --color-surface-mixed-400:  #5c5b62;
+    --color-surface-mixed-500:  #75747a;
+    --color-surface-mixed-600:  #8f8f93;
 }
 
 body {
     font-family: "Poppins", sans-serif;
-    background-color: var(--background);
+    background-color: var(--color-surface-200);
+    color:  var(--color-primary-600);
 }
 
 main {
@@ -30,7 +47,6 @@ main {
     height: 95vh;
     display: flex;
     gap: 20px;
-    color: var(--text);
     justify-content: center;
     align-items: center;
 }
@@ -38,11 +54,12 @@ main {
 .sidebar {
     width: 15%;
     height: 95%;
-    border-radius: 20px;
-    background-color: var(--theme-surface-a20);
+    border-radius: 15px;
+    background-color: var(--color-surface-300);
 }
 
 .content {
+    display: flex;
     width: 80%;
     height: 95%;
     border-radius: 10px;
@@ -50,9 +67,14 @@ main {
     padding-left: 10px;
 }
 
+.content-1 {
+    width: 95%;
+}
+
 .title-container {
     display: flex;
     gap: 20px;
+    margin-bottom: 25px;
 }
 
 .heading {
@@ -60,18 +82,60 @@ main {
 }
 
 .total-task-container {
-    margin-top: 10px;
-    margin-left: 10px;
-    border: rgba(130, 130, 130, 0.9) solid 2px;
+    margin-top: 7px;
+    border: rgba(130, 130, 130, 0.6) solid 2px;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 3px;
     border-radius: 10px;
 }
 
 .total-task {
     font-size: 25px;
     font-weight: 500;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.add_task_text {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+/*   ----------------------------------------------- */
+
+.button {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #0E1514;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition-duration: .2s;
+    color: #DCDCDC;
+}
+
+.button:hover {
+  background-color: rgb(77, 77, 77);
+  transition-duration: .2s;
+    color: rgb(250, 250, 250);
+}
+
+.content-container {
+
 }
