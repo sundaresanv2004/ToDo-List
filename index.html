@@ -8,7 +8,27 @@
 <body>
 <main>
     <div class="sidebar"></div>
-    <div class="content"></div>
+    <div class="content">
+        <div class="title-container">
+            <h1 class="heading">Today</h1>
+            <div class="total-task-container"><p class="total-task">5</p></div>
+        </div>
+        <div class="content-container">
+            <div class="add-task">
+                <lord-icon
+                        src="https://cdn.lordicon.com/jgnvfzqg.json"
+                        stroke="bold"
+                        target=".add-task"
+                        delay="300"
+                        trigger="loop-on-hover"
+                        colors="primary:#ffffff"
+                        style="width:25px;height:25px">
+                </lord-icon>
+                <p class="add_task_text">Add New Task</p>
+            </div>
+        </div>
+    </div>
 </main>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 </html>
