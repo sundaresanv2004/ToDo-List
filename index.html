@@ -7,7 +7,15 @@
 </head>
 <body>
 <main>
-    <div class="sidebar"></div>
+    <div class="sidebar">
+        <div class="menu_title">
+            <a class="menu_text">Menu</a>
+            <div class="option_icon">
+                <img src="assets/menu.png" alt="!">
+            </div>
+        </div>
+        <div class="menu1"></div>
+    </div>
     <div class="content">
         <div class="content-1">
             <div class="title-container">
@@ -17,8 +25,7 @@
             </div>
             <div class="content-container">
                 <div class="add-task">
-                    <button class="button">
-                        <lord-icon
+                    <lord-icon
                             src="https://cdn.lordicon.com/jgnvfzqg.json"
                             stroke="bold"
                             target=".add-task"
@@ -26,9 +33,30 @@
                             trigger="loop-on-hover"
                             colors="primary:#DCDCDC"
                             style="width:25px;height:25px">
-                        </lord-icon>
-                        <p class="add_task_text">Add New Task</p>
-                    </button>
+                    </lord-icon>
+                    <p class="add_task_text">Add New Task</p>
+                </div>
+                <div class="tasks">
+                    <div>
+                        <div class="task-1">
+                            <label class="checkbox-container">
+                                <input class="custom-checkbox" checked="" type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p class="task-name">Robotics Record</p>
+                        </div>
+                        <hr class="hr1">
+                    </div>
+                    <div>
+                        <div class="task-1">
+                            <label class="checkbox-container">
+                                <input class="custom-checkbox" checked="" type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p class="task-name">Robotics Record</p>
+                        </div>
+                        <hr class="hr1">
+                    </div>
                 </div>
             </div>
         </div>
