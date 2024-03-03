@@ -2,66 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todo List</title>
-    <link href="styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ToDo App</title>
 </head>
 <body>
-<main>
-    <div class="sidebar">
-        <div class="menu_title">
-            <a class="menu_text">Menu</a>
-            <div class="option_icon">
-                <img src="assets/menu.png" alt="!">
-            </div>
-        </div>
-        <div class="menu1"></div>
+    <div class="body-container">
+        <header>
+            <nav>
+                <div class="nav1">
+                    <a class="logo">Menu</a>
+                    <div class="'close-btn"><img src="assets/close.png" alt="."></div>
+                </div>
+                <div class="nav2"></div>
+                <div class="nav3"></div>
+            </nav>
+        </header>
     </div>
-    <div class="content">
-        <div class="content-1">
-            <div class="title-container">
-                <h1 class="heading">Today</h1>
-                <div class="total-task-container"><p class="total-task">5</p>
-                </div>
-            </div>
-            <div class="content-container">
-                <div class="add-task">
-                    <lord-icon
-                            src="https://cdn.lordicon.com/jgnvfzqg.json"
-                            stroke="bold"
-                            target=".add-task"
-                            delay="300"
-                            trigger="loop-on-hover"
-                            colors="primary:#DCDCDC"
-                            style="width:25px;height:25px">
-                    </lord-icon>
-                    <p class="add_task_text">Add New Task</p>
-                </div>
-                <div class="tasks">
-                    <div>
-                        <div class="task-1">
-                            <label class="checkbox-container">
-                                <input class="custom-checkbox" checked="" type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <p class="task-name">Robotics Record</p>
-                        </div>
-                        <hr class="hr1">
-                    </div>
-                    <div>
-                        <div class="task-1">
-                            <label class="checkbox-container">
-                                <input class="custom-checkbox" checked="" type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <p class="task-name">Robotics Record</p>
-                        </div>
-                        <hr class="hr1">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-<script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 </html>
