@@ -69,7 +69,7 @@ nav {
 
 .nav2 {
     margin: 20px 5px 10px 8px;
-    height: 73%;
+    height: 70%;
     display: flex;
     flex-direction: column;
 }
@@ -225,6 +225,7 @@ main {
     border: #ffffff 1px solid;
 }
 
+
 #dialog-container {
     position: fixed;
     top: 0;
@@ -259,4 +260,128 @@ main {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
+}
+
+
+
+
+
+#dialog-container {
+    position: fixed;
+    top: 0;
+    right: -410px;
+    width: 400px;
+    height: 100%;
+    background-color: var(--color-surface-300);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+}
+
+.add_task_dialog {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#dialog-header {
+    margin-top: 7px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#dialog-content {
+    padding: 20px;
+}
+
+#close-icon {
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.todo-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-and-title {
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    margin: 0;
+    font-size: 16px;
+}
+
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.todo-item span {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ccc;
+    transition: color 0.3s ease-in-out;
+}
+
+.todo-item span:hover {
+    color: #fff;
+}
+
+.dialog-content1 {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.newTask {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.newTask:focus {
+    border-color: #000;
+}
+
+.saveTaskButton {
+    background-color: #a688fa;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#saveTaskButton:hover {
+    background-color: #8768c9;
 }

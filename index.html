@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>ToDo App</title>
 </head>
 <body>
@@ -91,8 +92,8 @@
         <main>
             <div class="body-container1">
                 <div class="head">
-                    <a class="title">Active</a>
-                    <div class="total"><p id="total_task">5</p></div>
+                    <a class="title">All</a>
+                    <div class="total"><p id="total_task">0</p></div>
                 </div>
                 <div class="body1">
                     <div class="add_task" onclick="toggleDialog()">
@@ -105,8 +106,7 @@
                         </lord-icon>
                         <a>Add Task</a>
                     </div>
-                    <div class="tasks">
-
+                    <div class="tasks" id="todoList">
                     </div>
                 </div>
             </div>
@@ -119,11 +119,17 @@
             <span id="close-icon" onclick="toggleDialog()">x</span>
         </div>
         <div id="dialog-content">
-            <a>Hello</a>
+            <div class="dialog-content1">
+                <form id="newTaskForm">
+                    <label for="newTask"></label>
+                    <input type="text" id="newTask" name="newTask" class="newTask">
+                    <button type="submit" class="saveTaskButton" id="saveTaskButton">Save</button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <script src="index.js"></script>
+
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 </html>
