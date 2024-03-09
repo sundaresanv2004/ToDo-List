@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "English Assignment",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "name": "Shopping",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "name": "G-Meet",
+      "completed": false
+    }
+  ]
+}

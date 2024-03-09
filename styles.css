@@ -8,32 +8,33 @@
 }
 
 :root {
-    --color-primary-100:  #382bf0;
-    --color-primary-200:  #5e43f3;
-    --color-primary-300:  #7a5af5;
-    --color-primary-400:  #9171f8;
-    --color-primary-500:  #a688fa;
-    --color-primary-600:  #ba9ffb;
+    --color-primary-100: #382bf0;
+    --color-primary-200: #5e43f3;
+    --color-primary-300: #7a5af5;
+    --color-primary-400: #9171f8;
+    --color-primary-500: #a688fa;
+    --color-primary-600: #ba9ffb;
 
-    --color-surface-100:  #161616;
-    --color-surface-200:  #2b2b2b;
-    --color-surface-300:  #424242;
-    --color-surface-400:  #5a5a5a;
-    --color-surface-500:  #737373;
-    --color-surface-600:  #8d8d8d;
+    --color-surface-100: #161616;
+    --color-surface-200: #2b2b2b;
+    --color-surface-300: #424242;
+    --color-surface-400: #5a5a5a;
+    --color-surface-500: #737373;
+    --color-surface-600: #8d8d8d;
 
-    --color-surface-mixed-100:  #1e1928;
-    --color-surface-mixed-200:  #332e3c;
-    --color-surface-mixed-300:  #494452;
-    --color-surface-mixed-400:  #615c68;
-    --color-surface-mixed-500:  #797580;
-    --color-surface-mixed-600:  #928f98;
+    --color-surface-mixed-100: #1e1928;
+    --color-surface-mixed-200: #332e3c;
+    --color-surface-mixed-300: #494452;
+    --color-surface-mixed-400: #615c68;
+    --color-surface-mixed-500: #797580;
+    --color-surface-mixed-600: #928f98;
 }
 
 body {
     font-family: "Ubuntu", sans-serif;
     background-color: var(--color-surface-100);
     color: #ffffff;
+    margin: 0;
 }
 
 .body-container {
@@ -46,16 +47,18 @@ header {
     height: 93vh;
     width: 280px;
     border-radius: 12px;
-    position: absolute;
-    top: 25px;
-    left: 23px;
+    margin-top: 25px;
+    margin-left: 23px;
+}
+
+nav {
+    height: 100%;
 }
 
 .nav1 {
-    background-color: #5e43f3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 5px;
+    padding: 5px 10px;
+    height: 5%;
 }
 
 .logo {
@@ -64,6 +67,196 @@ header {
     font-size: 2rem;
 }
 
-.close-btn {
-    height: 10px;
+.nav2 {
+    margin: 20px 5px 10px 8px;
+    height: 73%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav2 .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.nav2 .tags_title, .task_title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #d5d5d5;
+    padding: 10px 5px;
+}
+
+.nav2 a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 5px;
+    width: 260px;
+    transition: .4s ease;
+    border-radius: 6px;
+    padding: 10px;
+    justify-content: start;
+}
+
+.nav2 a:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+    cursor: pointer;
+}
+
+.nav3 .options {
+    height: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.nav3 .option {
+    display: flex;
+    gap: 15px;
+    border-radius: 6px;
+    transition: .4s ease;
+    padding: 15px 15px;
+    margin: auto;
+    justify-content: start;
+    align-items: center;
+}
+
+.nav3 a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav3 .option:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--color-surface-200);
+}
+
+svg {
+    width: 20px;
+}
+
+svg path {
+    fill: #ffffff;
+}
+
+main {
+    width: 70%;
+}
+
+.body-container1 {
+    height: 93vh;
+    margin-top: 10px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.head a {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.head .total {
+    border: var(--color-surface-200) 2px solid;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.head .total p {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.body1 {
+    margin-top: 10px;
+}
+
+.body1 .add_task {
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 15px;
+    display: flex;
+    gap: 7px;
+    transition: .4s ease;
+    cursor: pointer;
+    border: var(--color-surface-200) 1px solid;
+    margin-bottom: 10px;
+}
+
+.add_task a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.body1 .add_task:hover {
+    border: #ffffff 1px solid;
+}
+
+#dialog-container {
+    position: fixed;
+    top: 0;
+    right: -410px;
+    width: 400px;
+    height: 100%;
+    background-color: var(--color-surface-300);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+}
+
+.add_task_dialog {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#dialog-header {
+    margin-top: 7px;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#dialog-content {
+    padding: 20px;
+}
+
+#close-icon {
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
 }
