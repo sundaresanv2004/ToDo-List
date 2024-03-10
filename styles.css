@@ -21,25 +21,16 @@
     --color-surface-400: #5a5a5a;
     --color-surface-500: #737373;
     --color-surface-600: #8d8d8d;
-
-    --color-surface-mixed-100: #1e1928;
-    --color-surface-mixed-200: #332e3c;
-    --color-surface-mixed-300: #494452;
-    --color-surface-mixed-400: #615c68;
-    --color-surface-mixed-500: #797580;
-    --color-surface-mixed-600: #928f98;
 }
 
 body {
     font-family: "Ubuntu", sans-serif;
     background-color: var(--color-surface-100);
     color: #ffffff;
-    margin: 0;
 }
 
 .body-container {
     display: flex;
-    position: relative;
 }
 
 header {
@@ -226,44 +217,6 @@ main {
 }
 
 
-#dialog-container {
-    position: fixed;
-    top: 0;
-    right: -410px;
-    width: 400px;
-    height: 100%;
-    background-color: var(--color-surface-300);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease-in-out;
-}
-
-.add_task_dialog {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-#dialog-header {
-    margin-top: 7px;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 10px;
-}
-
-#dialog-content {
-    padding: 20px;
-}
-
-#close-icon {
-    font-size: 25px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-
-
 
 
 #dialog-container {
@@ -282,7 +235,7 @@ main {
     font-weight: 500;
 }
 
-#dialog-header {
+.dialog-header {
     margin-top: 7px;
     color: #fff;
     padding: 10px;
@@ -292,7 +245,7 @@ main {
     margin-right: 10px;
 }
 
-#dialog-content {
+.dialog-content {
     padding: 20px;
 }
 
