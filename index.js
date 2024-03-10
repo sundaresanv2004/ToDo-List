@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const newTaskForm = document.getElementById("newTaskForm");
 
     newTaskForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+        event.preventDefault();
 
         const newTaskInput = document.getElementById("newTask");
         const taskText = newTaskInput.value.trim();
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// ... (your existing code)
+
 
 function deleteTask(button) {
     const taskItem = button.parentNode;
