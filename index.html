@@ -112,7 +112,7 @@
         </main>
     </div>
 
-    <div id="dialog-container">
+    <div id="dialog-container" class="dialog-container">
         <div class="dialog-header">
             <a class="add_task_dialog">Task:</a>
             <span id="close-icon" onclick="toggleDialog()">x</span>
@@ -123,6 +123,22 @@
                     <label for="newTask"></label>
                     <input type="text" id="newTask" name="newTask" class="newTask">
                     <button type="submit" class="saveTaskButton" id="saveTaskButton">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-dialog-container" class="dialog-container">
+        <div class="dialog-header">
+            <a class="add_task_dialog">Task:</a>
+            <span class="close-icon" onclick="edittoggleDialog()">x</span>
+        </div>
+        <div class="dialog-content">
+            <div class="dialog-content1">
+                <form id="editTaskForm">
+                    <label for="editTask"></label>
+                    <input type="text" id="editTask" name="editTask" class="editTask">
+                    <button type="submit" class="saveTaskButton" id="editsaveTaskButton">Save Changes</button>
                 </form>
             </div>
         </div>

@@ -219,7 +219,7 @@ main {
 
 
 
-#dialog-container {
+.dialog-container {
     position: fixed;
     top: 0;
     right: -410px;
@@ -249,7 +249,7 @@ main {
     padding: 20px;
 }
 
-#close-icon {
+.close-icon {
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
@@ -308,7 +308,7 @@ input[type="checkbox"]:checked + label {
     margin-top: 20px;
 }
 
-.newTask {
+.newTask, .editTask {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
@@ -319,7 +319,7 @@ input[type="checkbox"]:checked + label {
     transition: border-color 0.3s ease-in-out;
 }
 
-.newTask:focus {
+.newTask:focus, .editTask:focus {
     border-color: #000;
 }
 
