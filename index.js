@@ -1,3 +1,13 @@
+function toggleDialog() {
+    var dialogContainer = document.getElementById('dialog-container');
+    dialogContainer.style.right = (dialogContainer.style.right === '0px') ? '-410px' : '0';
+}
+
+function edittoggleDialog() {
+    var dialogContainer = document.getElementById('edit-dialog-container');
+    dialogContainer.style.right = (dialogContainer.style.right === '0px') ? '-410px' : '0';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const taskList = document.getElementById("todoList");
     const activeTasksCountElement = document.getElementById("total_task");
@@ -6,15 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const taskItem = document.createElement("div");
         taskItem.className = "task";
         taskItem.innerHTML = `
-                <div class="todo-item">
-                    <div class="checkbox-and-title">
-                        <input type="checkbox" id="${taskText}">
-                        <label for="${taskText}">${taskText}</label>
-                    </div>
-                    <span class="material-icons edit-icon" onclick="openEditDialog(this)">edit</span>
-                    <span class="material-icons delete-icon" onclick="deleteTask(this)">delete</span>
+            <div class="todo-item">
+                <div class="checkbox-and-title">
+                    <input type="checkbox" id="${taskText}">
+                    <label for="${taskText}">${taskText}</label>
                 </div>
-            `;
+                <span class="material-icons edit-icon" onclick="openEditDialog(this)">edit</span>
+                <span class="material-icons delete-icon" onclick="deleteTask(this)">delete</span>
+            </div>
+        `;
         return taskItem;
     }
 
@@ -34,9 +44,22 @@ document.addEventListener("DOMContentLoaded", function () {
             var currentText = activeTasksCountElement.textContent;
             activeTasksCountElement.textContent = parseInt(currentText) + 1;
 
-            toggleDialog();
+            toggleDialog(true);
         }
     });
+
+    const editTaskInput = document.getElementById("editTask");
+    const editTaskForm = document.getElementById("editTaskForm");
+
+    editTaskForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const taskLabel = document.querySelector('.task.editing label');
+        if (editTaskInput.value.trim() !== "") {
+            taskLabel.textContent = editTaskInput.value.trim();
+        }
+        edittoggleDialog();
+    });
+
 });
 
 function openEditDialog(button) {
@@ -47,17 +70,12 @@ function openEditDialog(button) {
     const editTaskInput = document.getElementById("editTask");
     editTaskInput.value = label.textContent;
 
-    const editTaskForm = document.getElementById("editTaskForm");
-
-    editTaskForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        if (editTaskInput.value.trim() !== "") {
-            label.textContent = editTaskInput.value.trim();
-        }
-        edittoggleDialog();
+    document.querySelectorAll('.task.editing').forEach(task => {
+        task.classList.remove('editing');
     });
-}
 
+    taskItem.classList.add('editing');
+}
 
 function deleteTask(button) {
     const taskItem = button.parentNode;
@@ -66,14 +84,3 @@ function deleteTask(button) {
     var currentText = activeTasksCountElement.textContent;
     activeTasksCountElement.textContent = parseInt(currentText) - 1;
 }
-
-function toggleDialog() {
-    var dialogContainer = document.getElementById('dialog-container');
-    dialogContainer.style.right = (dialogContainer.style.right === '0px') ? '-410px' : '0';
-}
-
-function edittoggleDialog() {
-    var dialogContainer = document.getElementById('edit-dialog-container');
-    dialogContainer.style.right = (dialogContainer.style.right === '0px') ? '-410px' : '0';
-}
-
