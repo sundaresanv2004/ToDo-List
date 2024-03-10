@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const taskList = document.getElementById("todoList");
-    const addTaskButton = document.getElementById("saveTaskButton");
     const activeTasksCountElement = document.getElementById("total_task");
 
     const newTaskForm = document.getElementById("newTaskForm");
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function deleteTask(button) {
     const taskItem = button.parentNode;
     taskItem.parentNode.removeChild(taskItem);
-
+    const activeTasksCountElement = document.getElementById("total_task");
     var currentText = activeTasksCountElement.textContent;
     activeTasksCountElement.textContent = parseInt(currentText) - 1;
 }
